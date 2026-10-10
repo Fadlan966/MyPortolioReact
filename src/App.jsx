@@ -16,6 +16,7 @@ import {
   GraduationCap,
   FileText
 } from 'lucide-react';
+import fotoFadlan from './images/foto-fadlan.jpg';
 
 const CustomStyles = () => (
   <style dangerouslySetInnerHTML={{__html: `
@@ -307,15 +308,31 @@ export default function App() {
             <div className="h-px bg-white/10 flex-grow"></div>
           </div>
           
+          <div className="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-12 md:gap-16 items-center mb-24">
+            <div className="relative mx-auto w-full max-w-[320px] group">
+              <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl blur opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-cyan-500/40 bg-[#0a0f1a]">
+                <img src={fotoFadlan} alt="Foto Muhammad Fadlan" className="w-full h-full object-cover object-top" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/80 via-transparent to-transparent"></div>
+                <div className="absolute bottom-3 left-4 right-4 flex justify-between font-mono text-xs text-cyan-400">
+                  <span>ID: M_FADLAN</span>
+                  <span>● ONLINE</span>
+                </div>
+              </div>
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyan-400"></div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-purple-400"></div>
+            </div>
+
+            <div className="space-y-6">
+              <p className="font-mono text-cyan-400 tracking-widest text-sm">&gt; whoami</p>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                I am a Software Engineering graduate with a strong interest in Quality Assurance and software testing. Through my academic background and internship experiences, I have developed skills in manual testing, bug reporting, test case execution, and quality control. I am detail-oriented, analytical, and committed to ensuring software products meet high-quality standards and provide the best user experience.
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
-              <p>
-                I'm a student at <strong className="text-cyan-400 font-normal">Universitas Bina Sarana Informatika</strong> with hands-on <strong className="text-cyan-400 font-normal">Quality Assurance</strong> internship experience at IMP and Qbit, where I learned to dissect software systems to find bugs, ensure stability, and guarantee seamless performance.
-              </p>
-              <p>
-                My approach combines comprehensive <span className="text-white border-b border-cyan-500/50">test scenario planning</span> with agile execution. I thrive in environments where precision matters, acting as the final checkpoint before deployment.
-              </p>
-              
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="flex items-center gap-3 p-3 bg-white/[0.02] border border-white/5 rounded-lg">
                   <Github className="w-6 h-6 text-gray-300" />
